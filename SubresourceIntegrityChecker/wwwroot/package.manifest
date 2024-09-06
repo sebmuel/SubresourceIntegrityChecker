@@ -1,0 +1,5 @@
+{
+    "id": "SubresourceIntegrityChecker",
+    "name": "SubresourceIntegrityChecker",
+    "allowPackageTelemetry": true
+}

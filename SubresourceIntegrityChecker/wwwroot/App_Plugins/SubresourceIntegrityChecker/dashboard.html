@@ -1,0 +1,32 @@
+﻿<div ng-controller="SIS.Controller">
+    <ng-form name="tabsForm" val-form-manager>
+        <umb-tabs-nav
+                tabs="tabs"
+                on-tab-change="changeTab(tab)">
+        </umb-tabs-nav>
+        <umb-box>
+            <umb-box-content>
+                <umb-tab-content
+                        ng-repeat="tab in tabs"
+                        ng-show="tab.active"
+                        tab="tab">
+                    <div ng-if="tab.alias === 'createChecksum'">
+                        <ng-form>
+                            <div class="form-group">
+                                <label for="createChecksumUrl">Url:</label>
+                                <input id="createChecksumUrl" type="url" required ng-model="createUrl"/>
+                            </div>
+                            <umb-button
+                                    type="button"
+                                    button-style="action"
+                                    label="Create Checksum"
+                                    action="createChecksum()">
+                            </umb-button>
+                            {{createUrl}}
+                        </ng-form>
+                    </div>
+                </umb-tab-content>
+            </umb-box-content>
+        </umb-box>
+    </ng-form>
+</div>

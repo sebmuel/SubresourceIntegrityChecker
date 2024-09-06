@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <StaticWebAssetBasePath>/</StaticWebAssetBasePath>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>SubresourceIntegrityChecker</PackageId>
+        <Product>SubresourceIntegrityChecker</Product>
+        <Title>SubresourceIntegrityChecker</Title>
+        <Description>...</Description>
+        <PackageTags>umbraco plugin package</PackageTags>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="ErrorOr" Version="2.0.1" />
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="13.3.2"/>
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="13.3.2"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Folder Include="App_Plugins\SubresourceIntegrityChecker\js\" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <None Include="wwwroot\App_Plugins\SubresourceIntegrityChecker\js\subresource-integrity-checker.js" />
+    </ItemGroup>
+</Project>

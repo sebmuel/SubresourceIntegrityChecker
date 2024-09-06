@@ -1,0 +1,10 @@
+﻿[ng-controller="SIS.Controller"] .form-group input:not([type="submit"]) {
+    width: 100%;
+}
+
+[ng-controller="SIS.Controller"] .form-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    width: 100%;
+}
